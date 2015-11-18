@@ -146,3 +146,10 @@ body{
 .shareplatforms {
     text-align: center;
 }
+
+.platform {
+    cursor: pointer;
+    height: 96px;
+    margin: 2px;
+    width: 96px;
+}
