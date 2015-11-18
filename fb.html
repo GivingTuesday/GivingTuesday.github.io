@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Alert Giving Tuesdays</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/fb.css">
+        
+        <script src="js/oauth.js"></script>
+        <script src="js/fb.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : '519355631554385',
+                    xfbml      : true,
+                    version    : 'v2.5'
+                });
+            };
+
+            (function(d, s, id){
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {return;}
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        
+        <div class="form-style-10">
+            <img class="logo" src="images/alertlogo.png">
+            <h1>Post to Facebook<span>Use our #GivingTuesday form to share to your timeline!</span></h1>
+            <form>
+                <div class="section" id="welcomeName">Help spread the word</div>
+                <div class="inner-wrap">
+                    <label>Status <textarea id="statusText" rows="6" cols="50"></textarea></label>
+                    <p><a href="http://j.mp/AlertGT" target="_blank">http://j.mp/AlertGT</a> #InternationalAlert #GivingTuesday #Peace</p>
+                    <font>The above links will be added to the end of your post.</font>
+                </div>
+                <div class="button-section">
+                    <input type="submit" onclick="postStatus()" value="Post" />
+                </div>
+            </form>
+            </div>
+        </div>
+    </body>
+</html>
