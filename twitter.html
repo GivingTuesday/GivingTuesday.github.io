@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="oauth.js"></script>
+        <script src="js/twitter.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/twitter.css">
+    </head>
+    
+    <body>
+        <div class="form-style-10">
+<h1>Post to Twitter!<span>Use our #GivingTuesday form to tweet!</span></h1>
+<form>
+    <div class="section"><span>1</span>Type your Tweet!</div>
+    <div class="inner-wrap">
+        <label>Tweet <textarea onKeyPress="return taLimit(this)" onKeyUp="return taCount(this,'myCounter')" rows="4" type="text" name="field1" id="tweettext"></textarea></label>
+        <p id="twittertag">#GivingTuesday @IntAlert</p>
+        <font> The Tag uses 25 characters.<br>You have <B><SPAN id=myCounter>115</SPAN></B> characters remaining for your Tweet.</font>
+    </div>
+    
+    <div class="section"><span>2</span>Would you like to Link to our Donation Page?</div>
+    <div class="inner-wrap">
+        <p style="color: #4D4D4D;">The Link: <b id="donatelink">j.mp/AlertGT</b> (This uses 13 characters)</p>
+        <span class="tag">
+     <input type="checkbox" name="field7" id="yeslink">Yes
+     </span>
+    </div>
+    <div class="button-section">
+     <input type="btn" name="Sign Up" value="Tweet!" onclick="tweet();" />
+    </div>
+</form>
+</div>
+    </body>
+</html>
