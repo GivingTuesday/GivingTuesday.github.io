@@ -19,6 +19,14 @@ alert("Twitter login failed, Please try again");
 })
 };
 
+//OAuth.popup('twitter').then(function(oauthResult) {
+//  return oauthResult.get('/me');
+//}).then(function(data) {
+//  // data is the result of the request to /me
+//}).fail(function(err) {
+//  // handle an error
+//});
+
 maxL=115;
 var bName = navigator.appName;
 function taLimit(taObj) {
@@ -45,7 +53,7 @@ function createObject(objId) {
 }
 
 function tweet(){
-//    authMe();
+    authMe();
     alert("I'm here")
 //    $(document).ready(function(){
 //        alert("Checking...")
@@ -77,11 +85,30 @@ function tweet(){
     var linkyes = document.getElementById("yeslink").value;
     
     if (linkyes == "on") {
+        var tweettag = " #GivingTuesday @IntAlert";
         var link = " j.mp/AlertGT";
         var tweettext = document.getElementById("tweettext").value;
+        tweettext = tweettext + tweettag;
         console.log(tweettext);
         tweettext = tweettext + link;
         console.log(tweettext);
+//        twttr.widgets.createTweet("https://twitter.com/share", tweettext,{text: tweettext});
+        OAuth.popup('twitter').then(function(oauthResult) {
+            return oauthResult.get('/me');
+            oauthResult.post('https://api.twitter.com/1.1/statuses/update.json', {
+            data: {
+                status: tweettext
+            }
+        })
+            console.log(oauthResult);
+        })
+        
     }
     
 }
+
+//<a href="https://twitter.com/share" class="twitter-share-button"{count} data-text=" #GivingTuesday @IntAlert" data-size="large">Tweet</a>
+//<script>
+    !function(d,s,id){
+    var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;fjs.parentNode.insertBefore(js,fjs);}
+}(document, 'script', 'twitter-wjs');
