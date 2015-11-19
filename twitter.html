@@ -1,10 +1,8 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<<<<<<< HEAD
+
         <script src="//platform.twitter.com/widgets.js"></script>
-=======
->>>>>>> da5c839cc36913da5014a781e9b6b4da4c1d07ae
         <script src="js/oauth.js"></script>
         <script src="js/twitter.js"></script>
         <link rel="stylesheet" type="text/css" href="css/twitter.css">
@@ -14,25 +12,25 @@
         <div class="form-style-10">
 <h1>Post to Twitter!<span>Use our #GivingTuesday form to tweet!</span></h1>
 <form>
-    <div class="section"><span>1</span>Type your Tweet!</div>
+    <div class="section"><span>1</span>Before you Tweet!</div>
     <div class="inner-wrap">
-        <label>Tweet <textarea onKeyPress="return taLimit(this)" onKeyUp="return taCount(this,'myCounter')" rows="4" type="text" name="field1" id="tweettext"></textarea></label>
+        <font>This is the Tag:</font>
         <p id="twittertag">#GivingTuesday @IntAlert</p>
-        <font> The Tag uses 25 characters.<br>You have <B><SPAN id=myCounter>115</SPAN></B> characters remaining for your Tweet.</font>
+        <font> Uses 25 characters.<br>Which means you have <B><SPAN id=myCounter>115</SPAN></B> characters remaining for your Tweet.</font>
     </div>
     
     <div class="section"><span>2</span>Would you like to Link to our Donation Page?</div>
     <div class="inner-wrap">
         <p style="color: #4D4D4D;">The Link: <b id="donatelink">j.mp/AlertGT</b> (This uses 13 characters)</p>
         <span class="tag">
-     <input type="checkbox" name="field7" id="yeslink">Yes
+            <font>If yes, please use this button:</font><br><br>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetlinkbtn" onclick="tweet();">Link</a>
      </span>
     </div>
-    <div class="button-section">
-     <input type="button" name="Sign Up" value="Tweet!" onclick="tweet();"  href="https://twitter.com/intent/tweet" />
-<!--        <a href="https://twitter.com/share" class="twitter-share-button"{count} data-text=" #GivingTuesday @IntAlert" data-size="large">Tweet</a>-->
-<script>
-    </div>
+    <div class="section"><span>3</span>If You Don't Want To Use The Link</div>
+    <div class="inner-wrap">
+        <font>Please use this button:</font><br><br><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetbtn" onclick="tweet();">Tweet</a>
+      </div>
 </form>
 </div>
     </body>
