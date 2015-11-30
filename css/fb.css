@@ -136,6 +136,7 @@ body{
 }
 
 .logo {
+    cursor: pointer;
     float: right;
     height: 64px;
     margin-right: -16px;

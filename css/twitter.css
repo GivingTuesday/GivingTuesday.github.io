@@ -131,3 +131,16 @@ body{
 	margin-top: 10px;
 	text-align: right;
 }
+
+.logo {
+    cursor: pointer;
+    float: right;
+    height: 64px;
+    margin-right: -16px;
+    margin-top: -16px;
+    width: 64px;
+}
+
+ht {
+    color: #2A88AD;
+}
