@@ -3,11 +3,9 @@ function authMe() {
     //Example with Twitter with the cache option enabled
     OAuth.popup('twitter', {cache: true}).done(function(twitter) {
         //make API calls with `twitter`
-        console.log("You're logged in to twitter. Congrats");
         res = OAuth.create('twitter');
         res.me().done(function(me) {
             alert('Hello ' + me.name);
-            console.log(me);
         }).fail(function(err) {
             //todo when the OAuth flow failed
             alert("Twitter login failed, Please try again");
@@ -50,27 +48,21 @@ function tweetOption(option) {
     var optionText = "";
     switch (option) {
         case 1:
-            console.log("The option is 1");
             optionText = "#GivingTuesday is today! This global day of charity is the perfect time to support #peace @intalert";
             break;
         case 2:
-            console.log("the option is 2");
             optionText = "On #GivingTuesday, @intalert will share stories of people around the world building #peace";
             break;
         case 3:
-            console.log("the option is 3");
             optionText = "On #GivingTuesday, stand with people around the world & help them build #peace @intalert";
             break;
         case 4:
-            console.log("the option is 4");
             optionText = "#Peace is when people manage their conflicts without violence #GivingTuesday @intalert";
             break;
         case 5:
-            console.log("the option is 5");
             optionText = "To end the #refugeecrisis, we need to build peace #GivingTuesday @intalert";
             break;
         default:
-            console.log("the option is 0");
             optionText = "#GivingTuesday @IntAlert";
     }
     //CLEAR OLD BUTTON
