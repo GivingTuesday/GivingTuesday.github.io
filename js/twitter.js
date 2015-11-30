@@ -6,7 +6,6 @@ OAuth.popup('twitter', {cache: true}).done(function(twitter) {
 console.log("You're logged in to twitter. Congrats");
 res = OAuth.create('twitter');
 res.me().done(function(me) {
-alert('Hello ' + me.name);
 console.log(me);
     
 }).fail(function(err) {
