@@ -1,37 +1,40 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-        <script src="//platform.twitter.com/widgets.js"></script>
+        <meta charset="utf-8">
+        <title>Alert Giving Tuesdays</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/twitter.css">
+        
         <script src="js/oauth.js"></script>
         <script src="js/twitter.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/twitter.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//platform.twitter.com/widgets.js"></script>
     </head>
-    
     <body>
         <div class="form-style-10">
-<h1>Post to Twitter!<span>Use our #GivingTuesday form to tweet!</span></h1>
-<form>
-    <div class="section"><span>1</span>Before you Tweet!</div>
-    <div class="inner-wrap">
-        <font>This is the Tag:</font>
-        <p id="twittertag">#GivingTuesday @IntAlert</p>
-        <font> Uses 25 characters.<br>Which means you have <B><SPAN id=myCounter>115</SPAN></B> characters remaining for your Tweet.</font>
-    </div>
-    
-    <div class="section"><span>2</span>Would you like to Link to our Donation Page?</div>
-    <div class="inner-wrap">
-        <p style="color: #4D4D4D;">The Link: <b id="donatelink">j.mp/AlertGT</b> (This uses 13 characters)</p>
-        <span class="tag">
-            <font>If yes, please use this button:</font><br><br>
-            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetlinkbtn" onclick="tweet();">Link</a>
-     </span>
-    </div>
-    <div class="section"><span>3</span>If You Don't Want To Use The Link</div>
-    <div class="inner-wrap">
-        <font>Please use this button:</font><br><br><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetbtn" onclick="tweet();">Tweet</a>
-      </div>
-</form>
-</div>
+            <h1>Post to Twitter!<span>Use our #GivingTuesday form to tweet!</span></h1>
+            <form>
+                <div class="section"><span>1</span>Before you Tweet!</div>
+                <div class="inner-wrap">
+                    <font>This is the Tag:</font>
+                    <p id="twittertag">#GivingTuesday @IntAlert</p>
+                    <font> Uses 25 characters.<br>Which means you have <B><SPAN id=myCounter>115</SPAN></B> characters remaining for your Tweet.</font>
+                </div>
+                <div class="section"><span>2</span>Would you like to Link to our Donation Page?</div>
+                <div class="inner-wrap">
+                    <p style="color: #4D4D4D;">The Link: <b id="donatelink">j.mp/AlertGT</b> (This uses 13 characters)</p>
+                    <span class="tag">
+                        <font>If yes, please use this button:</font><br><br>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetlinkbtn" onclick="tweet();">Link</a>
+                    </span>
+                </div>
+                <div class="section"><span>3</span>If You Don't Want To Use The Link</div>
+                <div class="inner-wrap">
+                    <font>Please use this button:</font><br><br><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="j.mp/AlertGT" data-text="#GivingTuesday @IntAlert" data-size="large" id="tweetbtn" onclick="tweet();">Tweet</a>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
